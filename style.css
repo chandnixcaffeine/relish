@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @font-face {
     font-family: "flagmen";
@@ -25,7 +26,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-transform: uppercase;
     font-family: 'flagmen';
 }
@@ -44,28 +46,48 @@ html, body {
 }
 
 nav {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 100%;
     padding: 2vw 4vw; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    align-items: center;
-    justify-content: space-between; 
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; 
     position: relative;
     z-index: 1000;
 }
 
 .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-grow: 1; 
-    justify-content: center; 
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
     position: relative;
 }
 
 .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 3vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 a {
@@ -80,7 +102,9 @@ a {
 i {
     color: #F4F1EA;
     display: none;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #name {
@@ -117,8 +141,12 @@ i {
 } 
 #follow-us{
     margin-top: 5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: 10%;
     width: 20%;
@@ -130,9 +158,15 @@ i {
     text-align: center;
     width: 100%;
     height: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #relish h1{
     color: #F4F1EA;
@@ -166,44 +200,80 @@ span {
 }
 
 #rightToleft {
-    animation: aTob 10s infinite linear;
+    -webkit-animation: aTob 10s infinite linear;
+            animation: aTob 10s infinite linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 1vw;
     gap: 3vw;
 }
 
 #leftToright {
-    animation: bToa 10s infinite linear;
+    -webkit-animation: bToa 10s infinite linear;
+            animation: bToa 10s infinite linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 1vw;
     gap: 3vw;
 }
 
-@keyframes aTob {
+@-webkit-keyframes aTob {
     from {
-        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
     }
     to {
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+}
+
+@keyframes aTob {
+    from {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+    }
+    to {
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+}
+
+@-webkit-keyframes bToa {
+    from {
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+    to {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
     }
 }
 
 @keyframes bToa {
     from {
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
     to {
-        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
     }
 }
 
 #image {
     width: 50%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 999;
 }
 
@@ -213,20 +283,31 @@ span {
     background-position: center;
     background-size: cover;
     display: block;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 #page2 {
     height: 100%;
     width: 100%;
     background-color: #F4F1EA;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
 }
 #circle-box{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 #page2 img{
@@ -247,6 +328,8 @@ span {
 #text-box{
     white-space: nowrap;
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding: 1vw;
     padding-top: 4vw;
@@ -261,8 +344,11 @@ span {
     font-weight: 500;
 }
 #img-part{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 0 4px;
 }
 img{
@@ -272,11 +358,15 @@ img{
     height: 100%;
 }
 #img1, #img2, #img3, #img4, #img5{
-    flex: 20%;
+    -webkit-box-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
     max-width: 20%;
     padding: 0 4px;
 }
 #page4{
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
     margin-top: 10vw;
@@ -297,9 +387,15 @@ img{
     background-color: #3b4af6;
     margin-bottom: 1vw;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 2vw;
 }
 #page4 h3{
@@ -313,12 +409,18 @@ img{
     font-size: 2.2vw;
 }
 #page5{
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
     margin-top: 2vw;
     /* margin-top: -15%; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #F4F1EA;
 }
 #page5 h1{
@@ -338,7 +440,8 @@ img{
     width: 50%;
     height: 90%;
     display: block;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 #left h5{
     font-family: "cyrene";
@@ -359,7 +462,8 @@ img{
     width: 50%;
     height: 90%;
     display: block;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 button{
     background-color: #3b4af6;
@@ -369,9 +473,15 @@ button{
     font-size: 1.3vw;
     border-radius: 10px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 3vw;
     padding: 1vw;
     border: none;
@@ -387,9 +497,15 @@ button:hover{
 #team{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 1vw;
     margin-bottom: 0.5vw;
     padding: 2vw;
@@ -414,9 +530,15 @@ button:hover{
     height: 100%;
     width: 100%;
     padding: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 1vw;
     background-color: #F4F1EA;
 }
@@ -424,8 +546,12 @@ button:hover{
     height: 100%;
     width: 50%;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #pattern-box{
     height: 100%;
@@ -461,8 +587,12 @@ button:hover{
     color: #F4F1EA;
 }
 #btns{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0vw 2vw;
     gap: 1vw;
 }
@@ -485,7 +615,8 @@ button:hover{
     height: 100%;
     width: 100%;
     display: block;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding: 2vw
 }
 #content h5{
@@ -506,6 +637,18 @@ input{
     margin-bottom: 1vw;
     color: #F4F1EA;
     outline: none;
+}
+::-webkit-input-placeholder{
+    color: #F4F1EA;
+}
+::-moz-placeholder{
+    color: #F4F1EA;
+}
+:-ms-input-placeholder{
+    color: #F4F1EA;
+}
+::-ms-input-placeholder{
+    color: #F4F1EA;
 }
 ::placeholder{
     color: #F4F1EA;
@@ -535,6 +678,8 @@ footer{
 #above{
     height: 80%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -554,8 +699,12 @@ footer{
 #parta{
     height: 100%;
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0vw 1vw;
 }
 #parta h1{
@@ -567,10 +716,14 @@ footer{
     padding: 2vw 0vw;
 }
 #partd i{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 0.7vw;
     font-size: 2.2vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 footer h3{
     font-size: 1.5vw;
@@ -597,6 +750,8 @@ footer a{
     height: 100%;
     width: 100%;
     padding: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2%;
 }
@@ -632,8 +787,12 @@ footer a{
     #follow-us{
         height: 10%;
         margin-top: 5vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 2vw;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
     #follow-us i{
@@ -643,9 +802,15 @@ footer a{
         text-align: center;
         width: 100%;
         height: 45%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding-bottom: 0.2vw;
     }
     #relish h1{
@@ -658,7 +823,9 @@ footer a{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 
     p {
@@ -694,14 +861,24 @@ footer a{
         height: 100%;
         width: 100%;
         background-color: #F4F1EA;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin: 0 auto;
         padding: 2vw;
     }
     #circle-box{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
     #page2 img{
@@ -712,6 +889,8 @@ footer a{
     }
 
     #text-box { 
+        height: -webkit-max-content; 
+        height: -moz-max-content; 
         height: max-content;
         padding: 10vw 0vw;
         margin-bottom: 2vw;
@@ -732,7 +911,9 @@ footer a{
     }
     
     #img1, #img2, #img3, #img4, #img5{
-        flex: 50%;
+        -webkit-box-flex: 50%;
+            -ms-flex: 50%;
+                flex: 50%;
         max-width: 50%;
         border-radius: 0;
         padding: 1.2vw;
@@ -741,10 +922,14 @@ footer a{
         display: none;
     }
     #page3{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         width: 100%;
     }
     #page4{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         width: 100%;
         margin-bottom: 7vw;
@@ -769,7 +954,12 @@ footer a{
         font-size: 5vw;
     }      
     #page5{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     #page5 h1{
@@ -777,6 +967,8 @@ footer a{
     }
     #left{
         width: 100%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         padding: 2vw 1vw;
     }
@@ -801,14 +993,23 @@ footer a{
         font-family: 'flagmen';
     }
     #team{
-        align-items:start;
-        justify-content: center;
+        -webkit-box-align:start;
+            -ms-flex-align:start;
+                align-items:start;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 2vw;
         padding:2vw 4vw;
     }
     #page6{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-top: 0vw;
     }
     #page6 h1{
@@ -826,6 +1027,8 @@ footer a{
     }
         
     #bag-img{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 50%;
         padding:  0vw 2vw;
@@ -886,6 +1089,8 @@ footer a{
     }
         
     footer{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         margin-top: 5vw;
     }
@@ -893,6 +1098,8 @@ footer a{
         display: none;
     }
     #bottom{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
     #bottom a{
@@ -911,7 +1118,10 @@ footer a{
     
     #menu-imgs{
         padding: 2% 4%;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 }
@@ -929,6 +1139,8 @@ footer a{
     }
     nav{
         background-color: #3b4af6;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         border: none;
     }
@@ -965,7 +1177,9 @@ footer a{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 
     p {
@@ -983,6 +1197,8 @@ footer a{
     }
     
     #page2 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 100%;
         background-color: #F4F1EA;
@@ -990,11 +1206,15 @@ footer a{
         padding-top: 3%;
     }
     #page3{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         width: 100%;
     }
     
     #text-box { 
+        height: -webkit-max-content; 
+        height: -moz-max-content; 
         height: max-content;
         padding: 10vw 0vw;
     }
@@ -1013,7 +1233,9 @@ footer a{
         white-space: nowrap;
     }
     #img1, #img2, #img3, #img4, #img5{
-        flex: 50%;
+        -webkit-box-flex: 50%;
+            -ms-flex: 50%;
+                flex: 50%;
         max-width: 50%;
         border-radius: 0;
         padding: 1.2vw;
@@ -1026,6 +1248,8 @@ footer a{
         border-radius: none;
     }
     #page4{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         width: 100%;
         margin: 4vw 0vw;
@@ -1048,7 +1272,12 @@ footer a{
     }
     
     #page5{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         margin-top: 4vw;
     }
@@ -1058,6 +1287,8 @@ footer a{
     }
     #left{
         width: 100%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         padding: 2vw 1vw;
     }
@@ -1081,15 +1312,24 @@ footer a{
         padding: 1.7vw 2vw;
     }
     #team{
-        align-items:center;
-        justify-content: space-between;
+        -webkit-box-align:center;
+            -ms-flex-align:center;
+                align-items:center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         gap: 2vw;
         padding:2vw 2vw;
     }   
     
     #page6{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-top: 2vw;
     }
     
@@ -1114,6 +1354,8 @@ footer a{
     #btns{
         padding: 0vw 2vw;
         padding-bottom: 5vw;
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
     #btns button{
@@ -1155,6 +1397,8 @@ footer a{
         margin-left: 5vw;
     }
     footer{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         margin-top: 5vw;
     }
@@ -1162,6 +1406,8 @@ footer a{
         display: none;
     }
     #bottom{
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
     #bottom a{
@@ -1179,7 +1425,10 @@ footer a{
     }
     #menu-imgs{
         padding: 2% 4%;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     
 }

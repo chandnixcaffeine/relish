@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
 @font-face {
     font-family: "flagmen";
     src: url("fonts/flagmen.woff") format('woff');
@@ -100,7 +102,7 @@ nav {
    
 }
 .menu-content ul li {
-    margin: 2.8vw 0;
+    margin: 2.5vw 0;
     
 }
 
@@ -112,10 +114,11 @@ nav {
 a {
     text-decoration: none;
     color: #fff;
-    font-family: "cyrene";
+    font-family: "Yatra One", system-ui;
+    /* font-family: "cyrene"; */
     font-size: 2vw;
-    letter-spacing: 1px;
-    font-weight: 900;
+    letter-spacing: -1px;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -326,6 +329,7 @@ img{
     height: max-content;
     width: 100%;
     margin-top: 10vw;
+
 }
 #page4 h1{
     padding: 1.5vw 2vw;
@@ -350,6 +354,7 @@ img{
 #page4 h3{
     color: #Fff;
     font-family: "Yatra One", system-ui;
+    font-weight: 300;
 } 
 #page4 i{
     color: #fff;
@@ -419,7 +424,9 @@ button{
     padding: 1vw;
     border: none;
 }
-
+#page5 a{
+    font-weight: 500;
+}
 button i{
     display: block;
     font-family: 'cyrene';
@@ -620,7 +627,7 @@ footer h3{
     font-weight: 100;
     padding: 1vw 0vw;
     padding-bottom: 0.7vw;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.8px;
     font-family: "cyrene";
     font-weight: 800;
     text-transform: uppercase;
